@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.password-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  width: auto;
+  margin: 50px;
+  padding: 20px;
+  border: #0d3b66 2px dashed;
+  border-radius: 10px;
+  background-color: #064789;
+  color: #f6f7eb;
+}
+p {
+  color: #0d3b66;
+  font-weight: 500;
+}
+.password-box {
+  flex: 1;
+  width: auto;
+  padding: 15px;
+  height: 150px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#copy-btn {
+  display: inline-block;
+  padding: 5px;
+  width: 90px;
+  background-color: #9381ff;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+#generate-btn {
+  display: inline-block;
+  padding: 5px;
+  width: 120px;
+  background-color: #0d3b66;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+#length {
+  cursor: grab;
+}
