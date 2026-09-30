@@ -8,7 +8,7 @@ const numbers = "0123456789";
 
 const symbols = "!@#$%^&*()_+-=[]{}";
 
-// initial password
+// Element Variables
 
 const password = document.getElementById("password");
 
@@ -30,12 +30,16 @@ const lenghtValueShow = document.getElementById("length-value");
 
 const strength = document.getElementById("strength");
 
+//for range
+
 passwordRange.addEventListener("input", function () {
   lenghtValueShow.innerText = passwordRange.value;
 });
 
 let characters = "";
 let strengthScore = 0;
+
+// To Generate Password Btn
 
 generateBtn.addEventListener("click", function () {
   characters = "";
@@ -72,7 +76,6 @@ generateBtn.addEventListener("click", function () {
 
   for (let i = 0; i < passwordLength; i++) {
     const randomIndex = Math.floor(Math.random() * characters.length);
-
     const randomCharacter = characters[randomIndex];
     generatePassword += randomCharacter;
   }
@@ -89,10 +92,11 @@ generateBtn.addEventListener("click", function () {
   }
 
   strength.textContent = `Strength: ${strengthText}`;
-
   password.value = generatePassword;
   copyBtn.textContent = "Copy";
 });
+
+// To Copy btn
 
 copyBtn.addEventListener("click", function () {
   navigator.clipboard.writeText(password.value);
